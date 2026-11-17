@@ -1,0 +1,14 @@
+check_name,result
+total_rows,21
+distinct_order_ids,20
+duplicate_order_id_rows,2
+missing_customer_rows,1
+quantity_not_positive_rows,1
+unit_price_not_positive_rows,1
+invalid_region_rows,1
+invalid_date_rows,1
+unmatched_rep_rows,1
+rows_with_at_least_one_issue,8
+clean_rows,13
+total_amount_all_rows,2160
+total_amount_clean_rows_only,1320
