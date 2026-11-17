@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How is the business performing, and where is the revenue coming from</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f4f6f8; color: #1f2937; line-height: 1.45; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 28px 20px 40px; }
+header { background: #16365c; color: #ffffff; border-radius: 10px; padding: 26px 28px; margin-bottom: 20px; }
+header h1 { font-size: 26px; line-height: 1.3; margin-bottom: 8px; }
+header p { font-size: 14px; color: #cbd5e1; }
+.kpis { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.kpi { flex: 1; min-width: 220px; background: #ffffff; border-radius: 10px; padding: 20px 22px; border-top: 4px solid #2e75b6; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); }
+.kpi .label { font-size: 13px; color: #5a6b7c; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+.kpi .value { font-size: 30px; font-weight: 700; color: #16365c; }
+.kpi .sub { font-size: 13px; color: #5a6b7c; margin-top: 4px; }
+.card { background: #ffffff; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); }
+.card h2 { font-size: 19px; color: #16365c; margin-bottom: 4px; }
+.card .note { font-size: 13px; color: #5a6b7c; margin-bottom: 14px; }
+.two { display: flex; gap: 20px; flex-wrap: wrap; }
+.two .card { flex: 1; min-width: 420px; }
+.legend { font-size: 13px; color: #5a6b7c; margin-top: 10px; }
+.legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; color: #5a6b7c; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; border-bottom: 2px solid #e3e8ee; }
+td { padding: 7px 10px; border-bottom: 1px solid #eef2f6; }
+td.num, th.num { text-align: right; }
+.takeaway { background: #eaf2fa; border-left: 5px solid #2e75b6; }
+.takeaway h2 { margin-bottom: 8px; }
+.takeaway p { font-size: 15px; margin-bottom: 10px; }
+.takeaway p:last-child { margin-bottom: 0; }
+footer { font-size: 13px; color: #5a6b7c; }
+footer p { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>How is the business performing, and where is the revenue coming from</h1>
+<p>UCI Online Retail, a UK based online retailer, Dec 2010 to Dec 2011. Public data, cleaned the same way as the peak hours project in this portfolio.</p>
+</header>
+
+<div class="kpis">
+<div class="kpi"><div class="label">Total Revenue</div><div class="value">$10,666,684.54</div><div class="sub">Across the full 13 month period</div></div>
+<div class="kpi"><div class="label">Total Orders</div><div class="value">19,960</div><div class="sub">Distinct invoices</div></div>
+<div class="kpi"><div class="label">Average Order Value</div><div class="value">$534.40</div><div class="sub">Total revenue divided by total orders</div></div>
+</div>
+
+<div class="card">
+<h2>Monthly Revenue</h2>
+<p class="note">Revenue by month with the order count under each month. The orange bar marks the peak month.</p>
+<svg width="980" height="340" viewBox="0 0 980 340" role="img" aria-label="Monthly revenue bar chart">
+<line x1="70" y1="276.0" x2="960" y2="276.0" stroke="#e3e8ee" stroke-width="1"/>
+<text x="62" y="280.0" text-anchor="end" font-size="12" fill="#5a6b7c">$0</text>
+<line x1="70" y1="199.1" x2="960" y2="199.1" stroke="#e3e8ee" stroke-width="1"/>
+<text x="62" y="203.1" text-anchor="end" font-size="12" fill="#5a6b7c">$500K</text>
+<line x1="70" y1="122.2" x2="960" y2="122.2" stroke="#e3e8ee" stroke-width="1"/>
+<text x="62" y="126.2" text-anchor="end" font-size="12" fill="#5a6b7c">$1M</text>
+<line x1="70" y1="45.4" x2="960" y2="45.4" stroke="#e3e8ee" stroke-width="1"/>
+<text x="62" y="49.4" text-anchor="end" font-size="12" fill="#5a6b7c">$1.5M</text>
+<line x1="70" y1="276" x2="960" y2="276" stroke="#94a3b8" stroke-width="1"/>
+<rect x="83.0" y="149.3" width="42.4" height="126.7" fill="#2e75b6" rx="2"/>
+<text x="104.2" y="143.3" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$824K</text>
+<text x="104.2" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Dec 2010</text>
+<text x="104.2" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,559 orders</text>
+<rect x="151.5" y="169.7" width="42.4" height="106.3" fill="#2e75b6" rx="2"/>
+<text x="172.7" y="163.7" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$691K</text>
+<text x="172.7" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Jan 2011</text>
+<text x="172.7" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,086 orders</text>
+<rect x="219.9" y="195.5" width="42.4" height="80.5" fill="#2e75b6" rx="2"/>
+<text x="241.2" y="189.5" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$524K</text>
+<text x="241.2" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Feb 2011</text>
+<text x="241.2" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,100 orders</text>
+<rect x="288.4" y="165.7" width="42.4" height="110.3" fill="#2e75b6" rx="2"/>
+<text x="309.6" y="159.7" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$718K</text>
+<text x="309.6" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Mar 2011</text>
+<text x="309.6" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,454 orders</text>
+<rect x="356.9" y="193.3" width="42.4" height="82.7" fill="#2e75b6" rx="2"/>
+<text x="378.1" y="187.3" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$538K</text>
+<text x="378.1" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Apr 2011</text>
+<text x="378.1" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,246 orders</text>
+<rect x="425.3" y="157.5" width="42.4" height="118.5" fill="#2e75b6" rx="2"/>
+<text x="446.5" y="151.5" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$771K</text>
+<text x="446.5" y="294.0" text-anchor="middle" font-size="11" fill="#334155">May 2011</text>
+<text x="446.5" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,681 orders</text>
+<rect x="493.8" y="158.9" width="42.4" height="117.1" fill="#2e75b6" rx="2"/>
+<text x="515.0" y="152.9" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$762K</text>
+<text x="515.0" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Jun 2011</text>
+<text x="515.0" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,533 orders</text>
+<rect x="562.2" y="165.4" width="42.4" height="110.6" fill="#2e75b6" rx="2"/>
+<text x="583.5" y="159.4" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$719K</text>
+<text x="583.5" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Jul 2011</text>
+<text x="583.5" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,475 orders</text>
+<rect x="630.7" y="159.3" width="42.4" height="116.7" fill="#2e75b6" rx="2"/>
+<text x="651.9" y="153.3" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$759K</text>
+<text x="651.9" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Aug 2011</text>
+<text x="651.9" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,361 orders</text>
+<rect x="699.2" y="113.2" width="42.4" height="162.8" fill="#2e75b6" rx="2"/>
+<text x="720.4" y="107.2" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$1,059K</text>
+<text x="720.4" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Sep 2011</text>
+<text x="720.4" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">1,837 orders</text>
+<rect x="767.6" y="98.4" width="42.4" height="177.6" fill="#2e75b6" rx="2"/>
+<text x="788.8" y="92.4" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$1,155K</text>
+<text x="788.8" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Oct 2011</text>
+<text x="788.8" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">2,040 orders</text>
+<rect x="836.1" y="43.9" width="42.4" height="232.1" fill="#c55a11" rx="2"/>
+<text x="857.3" y="37.9" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$1,509K</text>
+<text x="857.3" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Nov 2011</text>
+<text x="857.3" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">2,769 orders</text>
+<rect x="904.5" y="177.8" width="42.4" height="98.2" fill="#2e75b6" rx="2"/>
+<text x="925.8" y="171.8" text-anchor="middle" font-size="11" fill="#1f3864" font-weight="600">$639K</text>
+<text x="925.8" y="294.0" text-anchor="middle" font-size="11" fill="#334155">Dec 2011</text>
+<text x="925.8" y="310.0" text-anchor="middle" font-size="10" fill="#5a6b7c">819 orders</text>
+</svg>
+<p class="legend"><span class="swatch" style="background:#c55a11"></span>Peak month<span style="margin-left:18px"></span><span class="swatch" style="background:#2e75b6"></span>Other months</p>
+</div>
+
+<div class="two">
+<div class="card">
+<h2>Top 10 Products by Revenue</h2>
+<p class="note">Product description and revenue. Postage lines are shipping charges, not products for sale.</p>
+<svg width="450" height="336" viewBox="0 0 450 336" role="img">
+<text x="240" y="26.0" text-anchor="end" font-size="11" fill="#334155">DOTCOM POSTAGE</text>
+<rect x="248" y="12.0" width="124.0" height="20" fill="#2e75b6" rx="2"/>
+<text x="378.0" y="26.0" font-size="12" fill="#1f3864" font-weight="600">$206,249</text>
+<text x="240" y="58.0" text-anchor="end" font-size="11" fill="#334155">REGENCY CAKESTAND 3 TIER</text>
+<rect x="248" y="44.0" width="104.9" height="20" fill="#2e75b6" rx="2"/>
+<text x="358.9" y="58.0" font-size="12" fill="#1f3864" font-weight="600">$174,485</text>
+<text x="240" y="90.0" text-anchor="end" font-size="11" fill="#334155">PAPER CRAFT , LITTLE BIRDIE</text>
+<rect x="248" y="76.0" width="101.3" height="20" fill="#2e75b6" rx="2"/>
+<text x="355.3" y="90.0" font-size="12" fill="#1f3864" font-weight="600">$168,470</text>
+<text x="240" y="122.0" text-anchor="end" font-size="11" fill="#334155">WHITE HANGING HEART T-LIGHT HOLDER</text>
+<rect x="248" y="108.0" width="63.9" height="20" fill="#2e75b6" rx="2"/>
+<text x="317.9" y="122.0" font-size="12" fill="#1f3864" font-weight="600">$106,293</text>
+<text x="240" y="154.0" text-anchor="end" font-size="11" fill="#334155">PARTY BUNTING</text>
+<rect x="248" y="140.0" width="59.8" height="20" fill="#2e75b6" rx="2"/>
+<text x="313.8" y="154.0" font-size="12" fill="#1f3864" font-weight="600">$99,504</text>
+<text x="240" y="186.0" text-anchor="end" font-size="11" fill="#334155">JUMBO BAG RED RETROSPOT</text>
+<rect x="248" y="172.0" width="56.7" height="20" fill="#2e75b6" rx="2"/>
+<text x="310.7" y="186.0" font-size="12" fill="#1f3864" font-weight="600">$94,340</text>
+<text x="240" y="218.0" text-anchor="end" font-size="11" fill="#334155">MEDIUM CERAMIC TOP STORAGE JAR</text>
+<rect x="248" y="204.0" width="49.1" height="20" fill="#2e75b6" rx="2"/>
+<text x="303.1" y="218.0" font-size="12" fill="#1f3864" font-weight="600">$81,701</text>
+<text x="240" y="250.0" text-anchor="end" font-size="11" fill="#334155">Manual</text>
+<rect x="248" y="236.0" width="47.0" height="20" fill="#2e75b6" rx="2"/>
+<text x="301.0" y="250.0" font-size="12" fill="#1f3864" font-weight="600">$78,113</text>
+<text x="240" y="282.0" text-anchor="end" font-size="11" fill="#334155">POSTAGE</text>
+<rect x="248" y="268.0" width="47.0" height="20" fill="#2e75b6" rx="2"/>
+<text x="301.0" y="282.0" font-size="12" fill="#1f3864" font-weight="600">$78,102</text>
+<text x="240" y="314.0" text-anchor="end" font-size="11" fill="#334155">RABBIT NIGHT LIGHT</text>
+<rect x="248" y="300.0" width="40.3" height="20" fill="#2e75b6" rx="2"/>
+<text x="294.3" y="314.0" font-size="12" fill="#1f3864" font-weight="600">$66,965</text>
+</svg>
+</div>
+<div class="card">
+<h2>Top 10 Customers by Revenue</h2>
+<p class="note">CustomerID and revenue. The top 10 customers together drive 14.4 percent of revenue.</p>
+<svg width="450" height="336" viewBox="0 0 450 336" role="img">
+<text x="70" y="26.0" text-anchor="end" font-size="12" fill="#334155">14646</text>
+<rect x="78" y="12.0" width="282.0" height="20" fill="#2e75b6" rx="2"/>
+<text x="366.0" y="26.0" font-size="12" fill="#1f3864" font-weight="600">$280,206</text>
+<text x="70" y="58.0" text-anchor="end" font-size="12" fill="#334155">18102</text>
+<rect x="78" y="44.0" width="261.3" height="20" fill="#2e75b6" rx="2"/>
+<text x="345.3" y="58.0" font-size="12" fill="#1f3864" font-weight="600">$259,657</text>
+<text x="70" y="90.0" text-anchor="end" font-size="12" fill="#334155">17450</text>
+<rect x="78" y="76.0" width="195.8" height="20" fill="#2e75b6" rx="2"/>
+<text x="279.8" y="90.0" font-size="12" fill="#1f3864" font-weight="600">$194,551</text>
+<text x="70" y="122.0" text-anchor="end" font-size="12" fill="#334155">16446</text>
+<rect x="78" y="108.0" width="169.6" height="20" fill="#2e75b6" rx="2"/>
+<text x="253.6" y="122.0" font-size="12" fill="#1f3864" font-weight="600">$168,472</text>
+<text x="70" y="154.0" text-anchor="end" font-size="12" fill="#334155">14911</text>
+<rect x="78" y="140.0" width="144.7" height="20" fill="#2e75b6" rx="2"/>
+<text x="228.7" y="154.0" font-size="12" fill="#1f3864" font-weight="600">$143,825</text>
+<text x="70" y="186.0" text-anchor="end" font-size="12" fill="#334155">12415</text>
+<rect x="78" y="172.0" width="125.7" height="20" fill="#2e75b6" rx="2"/>
+<text x="209.7" y="186.0" font-size="12" fill="#1f3864" font-weight="600">$124,915</text>
+<text x="70" y="218.0" text-anchor="end" font-size="12" fill="#334155">14156</text>
+<rect x="78" y="204.0" width="118.1" height="20" fill="#2e75b6" rx="2"/>
+<text x="202.1" y="218.0" font-size="12" fill="#1f3864" font-weight="600">$117,380</text>
+<text x="70" y="250.0" text-anchor="end" font-size="12" fill="#334155">17511</text>
+<rect x="78" y="236.0" width="91.6" height="20" fill="#2e75b6" rx="2"/>
+<text x="175.6" y="250.0" font-size="12" fill="#1f3864" font-weight="600">$91,062</text>
+<text x="70" y="282.0" text-anchor="end" font-size="12" fill="#334155">16029</text>
+<rect x="78" y="268.0" width="81.5" height="20" fill="#2e75b6" rx="2"/>
+<text x="165.5" y="282.0" font-size="12" fill="#1f3864" font-weight="600">$81,025</text>
+<text x="70" y="314.0" text-anchor="end" font-size="12" fill="#334155">12346</text>
+<rect x="78" y="300.0" width="77.7" height="20" fill="#2e75b6" rx="2"/>
+<text x="161.7" y="314.0" font-size="12" fill="#1f3864" font-weight="600">$77,184</text>
+</svg>
+</div>
+</div>
+
+<div class="card">
+<h2>Revenue by Country</h2>
+<p class="note">All 38 countries in the data, sorted by revenue. The United Kingdom drives 84.6 percent of revenue.</p>
+<table>
+<tr><th>Country</th><th class="num">Revenue</th><th class="num">Share</th></tr>
+<tr><td>United Kingdom</td><td class="num">$9,025,222.08</td><td class="num">84.6%</td></tr>
+<tr><td>Netherlands</td><td class="num">$285,446.34</td><td class="num">2.7%</td></tr>
+<tr><td>EIRE</td><td class="num">$283,453.96</td><td class="num">2.7%</td></tr>
+<tr><td>Germany</td><td class="num">$228,867.14</td><td class="num">2.1%</td></tr>
+<tr><td>France</td><td class="num">$209,715.11</td><td class="num">2.0%</td></tr>
+<tr><td>Australia</td><td class="num">$138,521.31</td><td class="num">1.3%</td></tr>
+<tr><td>Spain</td><td class="num">$61,577.11</td><td class="num">0.6%</td></tr>
+<tr><td>Switzerland</td><td class="num">$57,089.90</td><td class="num">0.5%</td></tr>
+<tr><td>Belgium</td><td class="num">$41,196.34</td><td class="num">0.4%</td></tr>
+<tr><td>Sweden</td><td class="num">$38,378.33</td><td class="num">0.4%</td></tr>
+<tr><td>Japan</td><td class="num">$37,416.37</td><td class="num">0.4%</td></tr>
+<tr><td>Norway</td><td class="num">$36,165.44</td><td class="num">0.3%</td></tr>
+<tr><td>Portugal</td><td class="num">$33,747.10</td><td class="num">0.3%</td></tr>
+<tr><td>Finland</td><td class="num">$22,546.08</td><td class="num">0.2%</td></tr>
+<tr><td>Singapore</td><td class="num">$21,279.29</td><td class="num">0.2%</td></tr>
+<tr><td>Channel Islands</td><td class="num">$20,450.44</td><td class="num">0.2%</td></tr>
+<tr><td>Denmark</td><td class="num">$18,955.34</td><td class="num">0.2%</td></tr>
+<tr><td>Italy</td><td class="num">$17,483.24</td><td class="num">0.2%</td></tr>
+<tr><td>Hong Kong</td><td class="num">$15,691.80</td><td class="num">0.1%</td></tr>
+<tr><td>Cyprus</td><td class="num">$13,590.38</td><td class="num">0.1%</td></tr>
+<tr><td>Austria</td><td class="num">$10,198.68</td><td class="num">0.1%</td></tr>
+<tr><td>Israel</td><td class="num">$8,135.26</td><td class="num">0.1%</td></tr>
+<tr><td>Poland</td><td class="num">$7,334.65</td><td class="num">0.1%</td></tr>
+<tr><td>Greece</td><td class="num">$4,760.52</td><td class="num">0.0%</td></tr>
+<tr><td>Unspecified</td><td class="num">$4,749.79</td><td class="num">0.0%</td></tr>
+<tr><td>Iceland</td><td class="num">$4,310.00</td><td class="num">0.0%</td></tr>
+<tr><td>Canada</td><td class="num">$3,666.38</td><td class="num">0.0%</td></tr>
+<tr><td>USA</td><td class="num">$3,580.39</td><td class="num">0.0%</td></tr>
+<tr><td>Malta</td><td class="num">$2,725.59</td><td class="num">0.0%</td></tr>
+<tr><td>United Arab Emirates</td><td class="num">$1,902.28</td><td class="num">0.0%</td></tr>
+<tr><td>Lebanon</td><td class="num">$1,693.88</td><td class="num">0.0%</td></tr>
+<tr><td>Lithuania</td><td class="num">$1,661.06</td><td class="num">0.0%</td></tr>
+<tr><td>European Community</td><td class="num">$1,300.25</td><td class="num">0.0%</td></tr>
+<tr><td>Brazil</td><td class="num">$1,143.60</td><td class="num">0.0%</td></tr>
+<tr><td>RSA</td><td class="num">$1,002.31</td><td class="num">0.0%</td></tr>
+<tr><td>Czech Republic</td><td class="num">$826.74</td><td class="num">0.0%</td></tr>
+<tr><td>Bahrain</td><td class="num">$754.14</td><td class="num">0.0%</td></tr>
+<tr><td>Saudi Arabia</td><td class="num">$145.92</td><td class="num">0.0%</td></tr>
+</table>
+</div>
+
+<div class="card takeaway">
+<h2>Takeaway</h2>
+<p>Revenue is highly concentrated. The United Kingdom drives 84.6 percent of revenue, and the top 10 customers drive 14.4 percent. Revenue also peaks late in the year, with Nov 2011 the strongest month at $1,509,496.33, which is 14.2 percent of the full year.</p>
+<p><strong>Recommendation</strong> Protect the United Kingdom base and the top 10 customers first, and plan inventory and staffing for the Sep to Nov peak, since that is when demand is highest.</p>
+</div>
+
+<footer>
+<p>Data from UCI Online Retail, a UK based online retailer covering Dec 2010 to Dec 2011. The file holds 541,909 order lines. After cleaning, 530,104 lines remain. Cleaning removes lines with a negative quantity, which are cancellations, and lines with a zero unit price, which carry no sales value.</p>
+<p>No real employer or client data is used anywhere in this project. The data is public, and the analysis is my own.</p>
+</footer>
+</div>
+</body>
+</html>
